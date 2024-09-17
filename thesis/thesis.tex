@@ -1,0 +1,67 @@
+% !TEX root =thesis.tex
+\input{config.tex}
+
+%Informationen zur Arbeit
+\newcommand{\printname}{Elias Ahlers}
+\newcommand{\printnumber}{*** ***}
+
+\newcommand{\printtitle}{How can Large Language Models (LLMs) be Effectively Used for Classifying and Transferring Between Language Proficiency Levels in German?}
+\newcommand{\printalttitle}{Titel der Arbeit \\ auf Deutsch}
+\newcommand{\printcity}{Münster}
+\newcommand{\printtype}{Bachelor thesis}
+\newcommand{\printdegree}{Bachelor of Science}
+\newcommand{\printsupervisor}{Prof. Dr. Malte Schilling}
+\newcommand{\printfirstassessor}{Prof. Dr. Malte Schilling}
+\newcommand{\printsecondassessor}{Prof. Dr. Jan Vahrenhold}
+\newcommand{\printinstitute}{Computer Science Department}
+
+\begin{document}
+\pagenumbering{roman}
+
+% Titelblatt
+\begin{titlepage}
+\include{chapter/titlepage}
+\end{titlepage}
+
+\input{chapter/abstract.tex}
+\cleardoubleoddemptypage
+
+% Inhaltsverzeichnis
+\tableofcontents
+\cleardoublepage
+\pagenumbering{arabic}
+
+% Die Hauptkapitel der Arbeit
+\include{chapter/Introduction}
+%\include{chapter_dt/Einleitung}
+
+\include{chapter/Background}
+
+\include{chapter/Methods}
+
+\include{chapter/Results}
+
+\include{chapter/Discussion}
+
+\include{chapter/Conclusion}
+
+\include{chapter/appendix}
+
+% Literaturverzeichnis
+%\bibliographystyle{unsrtdin}
+%\bibliographystyle{apalike} 
+%\bibliographystyle{unsrtnat} 
+%\bibliographystyle{abbrvnat}
+\bibliographystyle{apa-good}
+\bibliography{References}
+
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+%\bibliography{Quellen}
+
+% Eidesstattliche Erklärung
+\include{chapter/declaration}
+
+
+\end{document}

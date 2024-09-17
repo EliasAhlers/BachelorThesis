@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>run-explorer</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .bottomBar {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 2vh;
+            background-color: white;
+            border: 1px solid black;
+            padding-left: 1vh;
+        }
+
+        .loader {
+            border: 2px solid #f3f3f3;
+            /* Light grey */
+            border-top: 2px solid #3498db;
+            /* Blue */
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    {{template}}
+    <div class="bottomBar">run-explorer - part of Bachelor thesis by Elias-Leander Ahlers</div>
+</body>
+
+</html>

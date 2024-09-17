@@ -1,0 +1,44 @@
+{
+  "A1": {
+    "average": 594.977653631285,
+    "minimum": 44,
+    "maximum": 1198,
+    "median": 662,
+    "standardDeviation": 299.92928319794686
+  },
+  "A2": {
+    "average": 354.96078431372547,
+    "minimum": 126,
+    "maximum": 901,
+    "median": 319.5,
+    "standardDeviation": 140.5114784859691
+  },
+  "B1": {
+    "average": 731.2356495468277,
+    "minimum": 183,
+    "maximum": 1692,
+    "median": 644,
+    "standardDeviation": 315.8577810071575
+  },
+  "B2": {
+    "average": 1552.2393617021276,
+    "minimum": 330,
+    "maximum": 5230,
+    "median": 1345.5,
+    "standardDeviation": 754.6766118349346
+  },
+  "C1": {
+    "average": 2558.8015873015875,
+    "minimum": 967,
+    "maximum": 6910,
+    "median": 2382.5,
+    "standardDeviation": 1152.7371774671537
+  },
+  "C2": {
+    "average": 2832.3661971830984,
+    "minimum": 1227,
+    "maximum": 6001,
+    "median": 2621.5,
+    "standardDeviation": 956.466122434251
+  }
+}

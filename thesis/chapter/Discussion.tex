@@ -1,0 +1,167 @@
+\chapter{Discussion}
+\label{ch:discussion}
+
+This chapter discusses the findings of this research on using LLMs for classifying and transferring between language proficiency levels in German. I will analyze the effectiveness of different approaches, examine the performance across CEFR levels, consider the implications for language learning and assessment and address the limitations of the methodology along with directions for future work.
+
+\section{Comparative Analysis of Classification and Transfer Methods}
+\label{s:comparative_analysis_of_methods}
+
+\subsection{Classification Task}
+\label{ss:classification_task}
+
+The results show a progression in classification accuracy as I moved from basic prompting to fine-tuning:
+
+\begin{itemize}
+    \item Basic English Prompt: 23.3\% accuracy, 64.6\% group accuracy
+    \item German Zero-Shot Prompt: 33.3\% accuracy, 75.3\% group accuracy
+    \item German Few-Shot Prompt: 59.3\% accuracy, 94.1\% group accuracy
+    \item Fine-tuned LLaMA-3-8B-Instruct: 77.3\% accuracy, 100\% group accuracy
+\end{itemize}
+
+This progression highlights several key points:
+
+\subsubsection{Language Alignment}
+\label{sss:language_alignment}
+The significant jump from English to German prompts (23.3\% to 33.3\%) shows the importance of aligning the prompt language with the target language. This suggests that LLMs may leverage language-specific knowledge more effectively when instructions are in the same language as the text being classified.
+
+\subsubsection{Few-Shot Learning}
+\label{sss:few-shot_learning}
+The substantial improvement from zero-shot to few-shot prompting (33.3\% to 59.3\%) demonstrates the power of providing examples. This aligns with findings from \citet{Brown2020}, who showed that few-shot learning can significantly boost performance on various NLP tasks.
+
+\subsubsection{Fine-Tuning Superiority}
+\label{sss:fine-tuning_superiority}
+The jump to 77.3\% accuracy with fine-tuning showcases its effectiveness for specialized tasks. This aligns with the general trend in NLP where task-specific fine-tuning often outperforms prompting methods \citep{Brown2020}.
+
+\subsubsection*{Test Set Limitations}
+\label{sss:test_set_limitations}
+Remarkably, the fine-tuned model achieved 100\% group accuracy on the test set. While this is an excellent result, it is important to note that this perfect group accuracy is specific to the test set used. In larger or different datasets, there may be instances where the model makes errors across non-adjacent levels. This near-perfect group accuracy suggests that even when the model makes errors, it is usually not completely misclassifying the proficiency level.
+
+\section{Performance Across CEFR Levels}
+\label{s:performance_across_cefr_levels}
+
+The fine-tuned model's performance varied across CEFR levels, as seen in Table \ref{tab:f1_scores}. Several patterns emerge from this data:
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{
+        >{\raggedright\arraybackslash}p{2cm}
+        >{\raggedright\arraybackslash}p{2cm}
+        }
+        \toprule
+        \textbf{CEFR Level} & \textbf{F1 Score} \\
+        \midrule
+        A1 & 0.8571 \\
+        \midrule
+        A2 & 0.7347 \\
+        \midrule
+        B1 & 0.7778 \\
+        \midrule
+        B2 & 0.6809 \\
+        \midrule
+        C1 & 0.7241 \\
+        \midrule
+        C2 & 0.8372 \\
+        \midrule
+        \textbf{Weighted} & 0.7686 \\
+        \bottomrule
+    \end{tabular}
+    \caption{F1 Scores Across CEFR Levels}
+    \label{tab:f1_scores}
+\end{table}
+
+\subsubsection*{Strong Performance at Extremes}
+\label{sss:strong_performance_at_extremes}
+The model is best at identifying A1 and C2 levels, which may be due to more distinctive linguistic features at these levels. For instance, A1 texts likely contain very basic vocabulary and simple sentence structures, while C2 texts may showcase complex language use that's easier to distinguish.
+
+\subsubsection*{Challenges with Intermediate Levels}
+\label{sss:challenges_with_intermediate_levels}
+The model struggles most with B2, which sits at the center of the CEFR scale. 
+This difficulty can be attributed to several factors. Firstly, B2 represents a transitional stage where learners are moving from intermediate to advanced proficiency, making it harder to differentiate from adjacent levels. The features that differentiate B2 from B1 and C1 may be more subtle and context-dependent. Additionally, B2 level texts often exhibit more variability in terms of complexity compared to other levels. Some B2 texts might be closer to B1 in certain aspects, while others might imitate C1 in others, leading to potential misclassifications.
+
+\subsubsection*{Implications of Misclassifications}
+\label{sss:implications_of_misclassifications}
+The confusion matrix (\ref{tab:finetuned_confusion_matrix}) and a group accuracy score of 100\% shows that most (all cases in the test data split) misclassifications occur between adjacent levels. This is somewhat reassuring, as it suggests that even when the model makes errors, it's usually not drastically misjudging the proficiency level. This comes down to a margin of error that is the same for human experts as there is no clear cut-off between levels and decisions are often subjective.
+The varying performance across levels has important implications for practical applications:
+
+\begin{itemize}
+    \item For placement tests or broad categorization, the model could be highly effective, especially in distinguishing between beginner (A1,A2), intermediate (B1,B2) and advanced learners (C1,C2).
+    \item For more precise assessment, especially around the B2 level, additional features, data or methods may be needed to improve accuracy.
+\end{itemize}
+\subsection{Transfer Task}
+\label{ss:transfer_task}
+
+The transfer task results demonstrate the challenges and future potential of adapting text between CEFR levels:
+
+\begin{itemize}
+    \item Baseline LLaMA-3-8B-Instruct model:
+    \begin{itemize}
+        \item Transfer accuracy: 18.1\%
+        \item Group transfer accuracy: 35.2\%
+        \item Content preservation: 86.7\%
+    \end{itemize}
+    \item Fine-tuned LLaMA-3-8B-Instruct model:
+    \begin{itemize}
+        \item Transfer accuracy: 34.9\%
+        \item Group transfer accuracy: 74.5\%
+        \item Content preservation: 70.8\%
+    \end{itemize}
+\end{itemize}
+
+These results highlight several important points: 
+
+Firstly, the fine-tuned model shows significant improvement in transfer accuracy (from 18.1\% to 34.9\%) and group transfer accuracy (from 35.2\% to 74.5\%) compared to the baseline model. This demonstrates the effectiveness of fine-tuning for the transfer task. Nevertheless, there also emerges a trade-off between transfer accuracy and content preservation. While the fine-tuned model improves accuracy, there's a decrease in content preservation (from 86.7\% to 70.8\%). This could stem from the higher CEFR levels being more complex and the model filling in more information for transformations from a lower to a higher CEFR level to accommodate for that. Leading to the judge model thinking that the content is not preserved, explaining the decrease in content preservation for the fine-tuned model.
+
+While the fine-tuning led to a substantial increase in transfer accuracy, the overall transfer accuracy is still rather low. Indicating that the task of transferring text between CEFR levels while preserving content is more challenging than classification alone. This complexity arises from the need to simultaneously modify linguistic features to match the target proficiency level while retaining the essential meaning and context of the original text.
+
+More importantly, the transfer dataset was rather small and unbalanced as seen in Table \ref{tab:transfer_distribution}. Imbalances like this can lead to underfitting of the model, as it may not have seen enough examples to learn the necessary transformations. Especially around transformations of adjacent CEFR levels, the model may have struggled to learn the necessary changes. Despite these challenges, the model fared rather well, showcasing the potential of LLMs for text adaptation tasks.
+
+\section{Contextualizing the Findings}
+\label{s:contextualizing_the_findings}
+To contextualize my findings, I compare them to the work of \cite{Szuuegyi2019}, \cite{Vajjala2018} and \cite{Caines2020} who conducted a similar study on German CEFR classification.
+
+\subsection*{Comparison to \cite{Szuuegyi2019}}
+\label{ss:comparison_to_szuegyi2019}
+Their study classified texts into three broad levels (A, B, and C), achieving 82\% accuracy, while this thesis employs a more granular six-level CEFR classification (A1-C2), achieving 77.3\% accuracy. Notably, my group accuracy is very similar to their accuracy metric and surpasses their results with 100\% of my test set, suggesting that LLMs can classify CEFR levels more accurately, even when making finer distinctions.
+
+Methodologically, our approaches differ significantly. Szuügyi et al. used a Linear SVM classifier with manually engineered features, while I utilized a fine-tuned LLM (LLaMA-3-8B-Instruct). My LLM-based approach demonstrates the ability to implicitly learn and utilize complex linguistic features without manual feature engineering, potentially capturing more nuanced language characteristics.
+
+\subsection*{Comparison to \cite{Vajjala2018} and \cite{Caines2020}}
+\label{ss:comparison_to_vajjala2018_and_caines2020}
+\cite{Caines2020} builds upon the work of \cite{Vajjala2018}, applying similar approaches to classify German texts into CEFR levels. While both studies focus on multilingual proficiency classification, \cite{Caines2020} expands the analysis to additional languages, refining feature-based methods and achieving slightly better results compared to \cite{Vajjala2018}. Given the improvements in the second paper, I will focus primarily on the results of \cite{Caines2020}.
+
+Both studies explore two key approaches: feature-based methods and neural network models. The feature-based models in \cite{Vajjala2018} and \cite{Caines2020} utilize linguistic and syntactic features such as word n-grams, part-of-speech (POS) n-grams and dependency triples, alongside domain-specific features like document length and lexical richness. These feature-based approaches achieved higher weighted F1 scores for German CEFR classification, outperforming their neural network counterparts, especially in \cite{Caines2020}, where the best feature-based model achieved a weighted F1 score of 0.702.
+
+In comparison, the fine-tuned classifier LLM achieved a weighted F1 score of 0.7656. This performance surpasses the results from both \cite{Vajjala2018} and \cite{Caines2020}. The LLM effectively generalized across various linguistic features without requiring explicit engineering.
+
+\section{Limitations and Future Work}
+\label{s:limitations_and_future_work}
+
+While this thesis demonstrates great potential in using LLMs for German CEFR classification and transfer, several limitations should be acknowledged:
+
+\subsection{Dataset Limitations}
+\label{ss:dataset_limitations}
+With only about 1,500 samples and an uneven distribution across CEFR levels, especially the overrepresentation of B1 and B2 levels (See Section \ref{s:classification_dataset_analysis}), the classification dataset is relatively small and may have introduced biases in the model's performance. While it was tried to avoid this by undersampling the B1 and B2 levels, it should still be kept in mind. With more data in the other CEFR levels, the model could potentially perform even better.
+
+The transfer task dataset is even smaller, due to being generated from the classification dataset. This could have led to underfitting of the model, as it may not have seen enough examples to learn the necessary transformations. Future work should focus on collecting a larger, more balanced dataset for the transfer task.
+
+Additionally, there could be a bias based on the sample texts content, not language proficiency. For example, if the A1 texts are all about the same (basic) topic, the model could learn to associate that topic with A1 proficiency, which would not generalize well to other texts. Avoiding this problem is rather hard as most training data in the lower CEFR levels is likely to be written by learners who are not yet proficient enough to write about a wide range of topics.
+
+\subsection{Model Limitations}
+\label{ss:model_limitations}
+The models also have limitations that should be considered. Firstly, the models are only fine-tuned on German texts and may not generalize well to other languages. This should not be a problem as the goal of this thesis was to work with German texts, but it should be kept in mind when trying to apply the models to other languages. Secondly, the models are LLMs and LLMs are known to be black boxes, meaning that it is hard to interpret why the model makes a certain decision.
+
+Another trait of this architecture in combination with the binary classification is that the classification model only outputs a single CEFR level. This is not ideal as language proficiency is a continuous scale and the CEFR levels have somewhat arbitrary cut-offs.
+
+\subsection{Transfer Task Challenges}
+\label{ss:transfer_task_challenges}
+The lower performance on the transfer task compared to classification highlights the need for more advanced techniques in text adaptation. The trade-off between transfer accuracy and content preservation needs further investigation. Future work could focus on developing metrics and techniques to better balance these competing objectives.
+
+\subsection{Future Work}
+\label{ss:future_work}
+Future work could address these limitations and expand on the current findings. I have identified several key areas for improvement and expansion to further advance research in this field:
+
+Firstly, the dataset used for training and evaluation should be massively expanded. This expanded dataset should include a larger and more balanced collection of genuine learner texts spanning uniformly across all CEFR levels. To enhance the model's generalizability, it is crucial to incorporate texts from a diverse range of topics and genres. Additionally, collecting the same text written at multiple CEFR levels, ideally produced by experts in each level, would provide a clear ground truth for comparison and analysis, removing the need for synthetic data. \\
+Secondly, the CEFR classification can be improved to better reflect the nuanced nature of language classification. One approach would be to extend the model to provide continuous scores across CEFR levels, rather than discrete classifications. This could potentially be achieved by extracting the logits from the model and using them as a continuous score, although this method may present challenges due to the multi-token nature of CEFR level labels. Additionally, training the model to output a confidence score alongside each prediction could potentially provide insight into the reliability the classifications. \\
+Lastly, to determine the effectiveness and usability of the model, it should be implemented in real-world language learning environments. Conducting studies in these settings would allow for assessment of the model's impact on learner progress and overall educational outcomes. Moreover, these studies would provide real-world based feedback on the model's ease of use for teachers and researchers, ensuring that it can be seamlessly integrated into existing workflows.
+
+    

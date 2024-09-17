@@ -1,0 +1,312 @@
+\chapter{Appendix}
+\label{ch:appendix}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{c|cccccc}
+        & \multicolumn{6}{c}{Predicted} \\
+        Actual & A1 & A2 & B1 & B2 & C1 & C2 \\
+        \hline
+        A1 & \cellcolor[rgb]{0.9,1,0.9}3 & \cellcolor[rgb]{0.97,1,0.97}1 & \cellcolor[rgb]{0.2,0.8,0.2}21 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 \\
+        A2 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{0.2,0.8,0.2}25 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 \\
+        B1 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{0.22,0.81,0.22}24 & \cellcolor[rgb]{0.97,1,0.97}1 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 \\
+        B2 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{0.46,0.88,0.46}17 & \cellcolor[rgb]{0.68,0.93,0.68}8 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 \\
+        C1 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{0.72,0.95,0.72}7 & \cellcolor[rgb]{0.4,0.86,0.4}18 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 \\
+        C2 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{0.2,0.8,0.2}25 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 \\
+    \end{tabular}
+    \caption{Confusion Matrix for the First English Prompt, sample size of 25 per class}
+    \label{tab:first_english_prompt}
+\end{table}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{c|cccccc}
+        & \multicolumn{6}{c}{Predicted} \\
+        Actual & A1 & A2 & B1 & B2 & C1 & C2 \\
+        \hline
+        A1 & \cellcolor[rgb]{0.8,0.96,0.8}5 & \cellcolor[rgb]{0.72,0.95,0.72}7 & \cellcolor[rgb]{0.76,0.95,0.76}6 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 \\
+        A2 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{0.84,0.97,0.84}4 & \cellcolor[rgb]{0.5,0.89,0.5}14 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 \\
+        B1 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{0.97,1,0.97}1 & \cellcolor[rgb]{0.23,0.81,0.23}23 & \cellcolor[rgb]{0.97,1,0.97}1 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 \\
+        B2 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{0.28,0.83,0.28}21 & \cellcolor[rgb]{0.84,0.97,0.84}4 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 \\
+        C1 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{0.76,0.95,0.76}6 & \cellcolor[rgb]{0.34,0.85,0.34}19 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 \\
+        C2 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{0.76,0.95,0.76}6 & \cellcolor[rgb]{0.34,0.85,0.34}19 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 \\
+    \end{tabular}
+    \caption{Confusion Matrix for zero-shot German Prompt, sample size of 25 per class}
+    \label{tab:zero_shot_confusion_matrix}
+\end{table}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{c|cccccc}
+        & \multicolumn{6}{c}{Predicted} \\
+        Actual & A1 & A2 & B1 & B2 & C1 & C2 \\
+        \hline
+        A1 & \cellcolor[rgb]{0.46,0.88,0.46}15 & \cellcolor[rgb]{0.8,0.96,0.8}5 & \cellcolor[rgb]{0.8,0.96,0.8}5 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 \\
+        A2 & \cellcolor[rgb]{0.9,0.98,0.9}3 & \cellcolor[rgb]{0.66,0.93,0.66}9 & \cellcolor[rgb]{0.54,0.9,0.54}13 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 \\
+        B1 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{0.97,1,0.97}1 & \cellcolor[rgb]{0.42,0.87,0.42}16 & \cellcolor[rgb]{0.72,0.95,0.72}7 & \cellcolor[rgb]{0.97,1,0.97}1 & \cellcolor[rgb]{1,1,1}0 \\
+        B2 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{0.28,0.83,0.28}21 & \cellcolor[rgb]{0.93,0.99,0.93}2 & \cellcolor[rgb]{0.93,0.99,0.93}2 \\
+        C1 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{0.69,0.94,0.69}8 & \cellcolor[rgb]{0.76,0.95,0.76}6 & \cellcolor[rgb]{0.58,0.91,0.58}11 \\
+        C2 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{1,1,1}0 & \cellcolor[rgb]{0.97,1,0.97}1 & \cellcolor[rgb]{0.93,0.99,0.93}2 & \cellcolor[rgb]{0.26,0.82,0.26}22 \\
+    \end{tabular}
+    \caption{Confusion Matrix for few-shot German Prompt, sample size of 25 per class}
+    \label{tab:few_shot_confusion_matrix}
+\end{table}
+
+\captionsetup{labelformat=prompt}
+\begin{figure}[h]
+    \begin{quotation}
+        \footnotesize
+        \textit{
+            Klassifiziere die Sprachkenntnisse des bereitgestellten deutschen Textes gemäß dem Gemeinsamen Europäischen Referenzrahmen für Sprachen (GER/CEFR). Antworte NUR mit der entsprechenden Stufe: A1, A2, B1, B2, C1 oder C2, NICHT MEHR. Gebe auch *keine* Begründung! \\
+            Hier sind jeweils Beispiele: \\ \\
+            A1: Lieber Jens, Ich Glückwünsche dich ist Vater geworden. Wie es deine Frau und deine Babys? Wie heißt des Babys? Brauchst du etwas hilfe? Könntest du bitte mich anrufen? Herzlichen Grüßen Maria Meier \\
+            A2: Liebe Dana, vielen Dank für ein Brief. Ich habe dein Brief gelesen, war toll. Die Prüfung habe ich bestanden. sehr toll. Danach bin ich nach Luxemburg gefahren. Ich besuche meine Schwester. Meine Schwester zeit einem jahre in Luxemburg gelieb. Die Stadt ist so interessant mich. war schön. Ich bleibe noch ein woche bei meine Schwester. Ich wünsche eine uhr aus Istanbul. Kannst du mir mitbringen. Vielleicht treffen wir uns wenn du nach Trier zurück kommen. Ich vermisse dich. viele Grüße Katharina \\
+            B1: Liebe meine Freundin, Ich hoffe es geht dir gut und Ich Wünsche alles gute. Ich habe ein Hund aber  Ich bin Für ein paar Tag nicht zu Hause Kann Ich nicht nehme mit, Kamm er ein paar Tage bei dir Bleiben,  von 10 bis 14 Januar nur vier Tage, weil Ich nach marokko Fahre.  Schön Grüße dein Stefan \\
+            B2: Hallo zusammen Ich bin Maria, komme aus Spanien und wohne in Deutschland seit funfzehn Jahen. Ich wollte hiermit meine Meinung zum Thema „Deutsch Lernen" äussern. Warum Deutsch als Fremdsprache lernen auswählen, wenn es andere Sprache gibt, die nützlicher. seien konnten. Es war für mich auch eine schwierig Entscheidung. Selbst als Spanierin hatte ich schon eine Sprache beherrscht, die weltweit gesprochen war. Dann kam die Frage: Warum Deutsch und nicht Englisch? Nach einigen Untersuchungen war das denn klar. Deutschland ist der Land Europas, wo es mehr Industrie gibt, vor allem Chemieindustrie, aber auch Maschinenbauindustrie und Informationindustrie sind hier sehr wichtig. Für mich als Chemie Studentin war das damals ein entscheidendes Faktor. Auf der Welt gesehen ist auch Deutschland der Land, der mehr exportiert. Das heisst, auch wenn man in einem deutschsprachigen Land nicht wohnt, lohnt es sich, Deutsch zu können. Dies bezüglich, wenn man für die EU arbeiten will, ist Deutsch eine der offiziellen europäischen Sprachen. Nicht nur die Arbeitsmöglichkeiten entweder in Deutschland oder mit deutschen Firmen sind ein Grund Deutsch zu lernen sondern auch die Kultur und alle Chancen, die diese anbietet. Deutsch wird in drei Ländern in Europa gesprochen: Deutschland, Österreich und die Schweiz, und sogar in einem Teil Brasiliens, deswegen ist es auch praktisch Deutsch zu sprechen, wenn man an alle Reisen denkt, die man machen kann. Also von mir ausgesehen würde ich das Deutsch als Fremdsprache lernen empfehlen, da es vieles anbietet. Man muss nicht nur darauf achten, wie viele Menschen die Sprache sprechen, sondern auch welche positive Vorteile das Sprache Sprechen bringt. \\
+            C1: Meiner Meinung nach ist dass einerseits man sich an der Kultur des Gastlandes orientieren sollte, anderseits ist es sinnvoll, auch im Ausland die Traditionen seines Heimatlandes fortzusetzen. Wenn man in Ausland einwandert, ist es schwer zuerst wegen Fremdsprache, Kultur, Mentalitet in Gesellschaft sich zu integrieren. Aber ich denke, man soll diese Schweirigkeiten durch Lernen von Kultur des Gastlandes kämpfen. Besonders durch Sprachlernen, weil die Sprache eine wichtige Teil von jeder Kultur ist. Gleichzeitig soll man die Traditionen seines Heimatlandes nicht vergessen. Es ist besonders sinnvoll, wenn es kleine Diaspora im Ausland gibt, deshalb hat man eine Möglichkeit seine Kultur zu entwickeln und verbreiten. Zum Beispiel, in Deutschland gibt es viele Ausländer aus Türkei und ex-USSR, die gut Deutsch sprechen, Deutsche Literatur lesen, Deutsche Freunden haben und das stört ihnen nicht die Taditionen ihres Heimatlandes fortzusetzen. Also, möchte ich zum Shcluss sagen, dass es keine genau Antwort auf diese Frage gibt, trotzdem glaube ich, dass man eine Balance finden soll.ddd \\
+            C2: Die eigentlichen Hauptsprachen sind English, Frazösisch und Spanisch. Jedoch finde ich es sehr wichtig und angebracht auch Deutsch zu studieren. Es gibt einige Bücher, Gedichte und Stücke die zwar in anderen Sprachen übersetzt werden, jedoch ist der deutscher Stil von grosser Bedeutung. Falls man solche wundervolle Kunstwerke in einer anderen Sprache liest, wird es einen ganz anderen Eindruck auf den Lesen haben. Auch in anderen Bereichen ist Deutsch notwendig und manchmal gar unerlässlich. Wenn man zum Beispiel Deutschland oder Österreich wohnt ist das Beherrschen von der deutschen Sprache ein Muss. Wie soll man ohne vollständige Deutschkenntnisse eine gut bezahlte Arbeit finden? Wie soll man sich auf der Strasse oder in einem Geschäft richtig verständigen? Auf solche Problem gibt es nur eine Lösung, nämlich, man muss das Deutsch beherrschen und bequem mit der Sprache umgehen können. Für beide Punkte finde ich es sehr sinnvoll sich mit Deutschlernen zu befassen. Jedoch möchte ich noch klarstellen, dass man sich allererst mit den drei, schon oben erwähnten Hauptsprachen, beschäftigen soll. Alles in allem finde ich, dass wenn man Zeit, Geld und Lust für die deutsche Sprache findet, ist es sehr Lobenswert sich darin zu vertiefen. \\
+            % C2: In diesem Auszug aus George A. Millers "Wörter. Streifzüge durch die Psycholinguistik" aus dem Jahr 1993 wird erläutert, welche sprachlichen Mittel dem Mensch zur Verfügung stehen, um Referenten von einander zu unterscheiden und damit klar zu bestimmen. Generell braucht der Mensch vereinheitlichende Kategorien, um seine komplexe Umwelt sprachlich fassen zu können. Damit jedoch eine erfolgreiche Kommunikation stattfinden kann, bedarf es sprachlicher Mittel, die eindeutig auf das verweisen können, worüber gesprochen wird. Der Mensch verfügt deshalb über eine besonders ausgeprägte Diskriminationsfähigkeit. Neben der Möglichkeit mit Hilfe von Eigennamen etwas bzw. jemanden zu beschreiben und gleichzeitig zu idenitifizieren, besitzt die deutsche Sprache syntaktische Konstruktionen, wie Relativsatz, Präpositionalphrase oder Genitivergänzung, mit denen die allgemeine Bedeutung eines Nomens, das eine Klasse von Objekten oder Ereignissen bezeichnet, so modifiziert werden kann, dass nur auf einen bestimmten Vertreter referiert wird. Die syntaktischen Mittel erlauben es, die individuellen Merkmale des bezeichneten Objektes oder Ereignisses zu beschreiben. Nach Miller eignen sich hierfür besonders gut Adjektive und Adverbien, die zu der Gruppe der Modifikatoren gehören. \\
+        }
+    \end{quotation}
+    \caption{Full German Few-Shot Prompt}
+    \label{qu:few_shot_prompt_complete}
+\end{figure}
+\captionsetup{labelformat=default}
+
+\begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}[scale=0.7]
+        % Define colors
+        \definecolor{barcolor1}{RGB}{31,119,180}
+        \definecolor{barcolor2}{RGB}{255,127,14}
+        
+        % Draw axes
+        \draw[->] (0,0) -- (10,0) node[right] {Models};
+        % \draw[->] (0,0) -- (0,10) node[above] {Performance};
+        \draw[->] (0,0) -- (0,10);
+        \node[anchor=south] at (0,10.5) {Performance};
+        
+        % Y-axis labels
+        \foreach \y in {0,20,40,60,80,100}
+            \draw (0,\y/10) node[left] {\y} -- (-0.1,\y/10);
+        
+        % Data
+        \foreach [count=\i] \model/\accuracy/\groupaccuracy in {
+            % {Phi-3-medium-4k-instruct}/0.0/0.0,
+            % {mistralai/mistral-nemo}/18.00/56.00,
+            {Mistral-7B-Instruct}/21.33/58.00,
+            {Mixtral-8x22B-Instruct-v0.1}/32.00/65.33,
+            {google/gemma-2-9b-it}/36.00/74.67,
+            {google/gemma-2-27b-it}/38.00/77.33
+        } {
+            % Draw bars
+            \fill[barcolor1] (2.25*\i-1.6,0) rectangle (2.25*\i-0.85,\accuracy/10);
+            \fill[barcolor2] (2.25*\i-0.8,0) rectangle (2.25*\i-0.05,\groupaccuracy/10);
+            
+            % Labels
+            \node[below, text width=2.5cm, align=center, rotate=45, anchor=north east] at (2.25*\i-0,0) {\footnotesize\model};
+            \node[above right, xshift=2pt] at (2.25*\i-2.2,\accuracy/10) {\footnotesize\accuracy\%};
+            \node[above right, xshift=2pt] at (2.25*\i-1.3,\groupaccuracy/10) {\footnotesize\groupaccuracy\%};
+        }
+        
+        % Improved Legend with more spacing
+        \node[anchor=north west, inner sep=0, outer sep=0] at (3,11) {
+            \begin{tikzpicture}
+                \fill[barcolor1] (0,0) rectangle (0.3,0.3);
+                \node[right] at (0.4,0.15) {Accuracy (\%)};
+                \fill[barcolor2] (3,0) rectangle (3.3,0.3);
+                \node[right] at (3.4,0.15) {Group Accuracy (\%)};
+            \end{tikzpicture}
+        };
+        
+    \end{tikzpicture}
+    \begin{tikzpicture}[scale=0.7]
+        % Define colors
+        \definecolor{barcolor1}{RGB}{31,119,180}
+        \definecolor{barcolor2}{RGB}{255,127,14}
+        
+        % Draw axes
+        \draw[->] (0,0) -- (10,0) node[right] {Models};
+        % \draw[->] (0,0) -- (0,10) node[above] {Performance};
+        \draw[->] (0,0) -- (0,10);
+        \node[anchor=south] at (0,10.5) {Performance};
+        
+        % Y-axis labels
+        \foreach \y in {0,20,40,60,80,100}
+            \draw (0,\y/10) node[left] {\y} -- (-0.1,\y/10);
+        
+        % Data
+        \foreach [count=\i] \model/\accuracy/\groupaccuracy in {
+            % {google/gemma-2-27b-it}/38.00/77.33,
+            {Qwen/Qwen2-7B-Instruct}/38.00/80.67,
+            {Meta-LLaMA-3-70B-Instruct}/44.67/92.67,
+            {Meta-LLaMA-3-8B-Instruct}/59.33/94.00,
+            % {openai/gpt-4o-mini}/39.33/94.67,
+            {Qwen/Qwen2-72B-Instruct}/54.67/98.00
+        } {
+            % Draw bars
+            \fill[barcolor1] (2.25*\i-1.6,0) rectangle (2.25*\i-0.85,\accuracy/10);
+            \fill[barcolor2] (2.25*\i-0.8,0) rectangle (2.25*\i-0.05,\groupaccuracy/10);
+            
+            % Labels
+            \node[below, text width=2.5cm, align=center, rotate=45, anchor=north east] at (2.25*\i-0,0) {\footnotesize\model};
+            \node[above right, xshift=2pt] at (2.25*\i-2.2,\accuracy/10) {\footnotesize\accuracy\%};
+            \node[above right, xshift=2pt] at (2.25*\i-1.3,\groupaccuracy/10) {\footnotesize\groupaccuracy\%};
+        }
+        
+        % Improved Legend with more spacing
+        \node[anchor=north west, inner sep=0, outer sep=0] at (3,11.0) {
+            \begin{tikzpicture}
+                \fill[barcolor1] (0,0) rectangle (0.3,0.3);
+                \node[right] at (0.4,0.15) {Accuracy (\%)};
+                \fill[barcolor2] (3,0) rectangle (3.3,0.3);
+                \node[right] at (3.4,0.15) {Group Accuracy (\%)};
+            \end{tikzpicture}
+        };
+        
+    \end{tikzpicture}
+    \caption{Performance Comparison of Different Language Models}
+    \label{fig:llm-performance-comparison}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}[scale=0.7]
+        % Define colors
+        \definecolor{barcolor1}{RGB}{31,119,180}
+        \definecolor{barcolor2}{RGB}{255,127,14}
+        
+        % Draw axes
+        \draw[->] (0,0) -- (8,0) node[right] {Models};
+        \draw[->] (0,0) -- (0,10);
+        \node[anchor=south] at (0,10.5) {Performance};
+        
+        % Y-axis labels
+        \foreach \y in {0,20,40,60,80,100}
+            \draw (0,\y/10) node[left] {\y} -- (-0.1,\y/10);
+        
+        % Data
+        \foreach [count=\i] \model/\accuracy/\groupaccuracy in {
+            {Stock LLaMA-3-8B}/16.98/33.02,
+            {Fine-tuned LLaMA-3-8B}/40.95/71.43
+        } {
+            % Draw bars
+            \fill[barcolor1] (3.5*\i-2.6,0) rectangle (3.5*\i-1.35,\accuracy/10);
+            \fill[barcolor2] (3.5*\i-1.3,0) rectangle (3.5*\i-0.05,\groupaccuracy/10);
+            
+            % Labels
+            \node[below, text width=3cm, align=center, rotate=45, anchor=north east] at (3.5*\i-0,0) {\footnotesize\model};
+            \node[above right, xshift=2pt] at (3.5*\i-3.2,\accuracy/10) {\footnotesize\accuracy\%};
+            \node[above right, xshift=2pt] at (3.5*\i-1.8,\groupaccuracy/10) {\footnotesize\groupaccuracy\%};
+        }
+        
+        % Legend
+        \node[anchor=north west, inner sep=0, outer sep=0] at (2.5,11) {
+            \begin{tikzpicture}
+                \fill[barcolor1] (0,0) rectangle (0.3,0.3);
+                \node[right] at (0.4,0.15) {Transfer Accuracy (\%)};
+                \fill[barcolor2] (4.5,0) rectangle (4.8,0.3);
+                \node[right] at (4.9,0.15) {Group Accuracy (\%)};
+            \end{tikzpicture}
+        };
+        
+    \end{tikzpicture}
+    \caption{Performance Comparison: Stock vs Fine-tuned LLaMA-3-8B Model}
+    \label{fig:llama-performance-comparison}
+\end{figure}
+
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{
+        >{\raggedright\arraybackslash}p{2cm}
+        >{\raggedright\arraybackslash}p{1.5cm}
+        >{\raggedright\arraybackslash}p{2cm}
+        }
+        \toprule
+        \textbf{Transfer Type} & \textbf{Count} & \textbf{Percentage} \\
+        \midrule
+        A1 $\rightarrow$ C1 & 125 & 10.31\% \\
+        C1 $\rightarrow$ A1 & 125 & 10.31\% \\
+        A1 $\rightarrow$ C2 & 118 & 9.74\% \\
+        C2 $\rightarrow$ A1 & 118 & 9.74\% \\
+        A2 $\rightarrow$ C2 & 87 & 7.18\% \\
+        C2 $\rightarrow$ A2 & 87 & 7.18\% \\
+        A2 $\rightarrow$ C1 & 80 & 6.60\% \\
+        C1 $\rightarrow$ A2 & 80 & 6.60\% \\
+        A1 $\rightarrow$ B2 & 63 & 5.20\% \\
+        B2 $\rightarrow$ A1 & 63 & 5.20\% \\
+        A1 $\rightarrow$ B1 & 33 & 2.72\% \\
+        B1 $\rightarrow$ A1 & 33 & 2.72\% \\
+        A2 $\rightarrow$ B2 & 32 & 2.64\% \\
+        B2 $\rightarrow$ A2 & 32 & 2.64\% \\
+        B1 $\rightarrow$ C1 & 27 & 2.23\% \\
+        C1 $\rightarrow$ B1 & 27 & 2.23\% \\
+        B1 $\rightarrow$ C2 & 23 & 1.90\% \\
+        C2 $\rightarrow$ B1 & 23 & 1.90\% \\
+        B2 $\rightarrow$ C2 & 7 & 0.58\% \\
+        C2 $\rightarrow$ B2 & 7 & 0.58\% \\
+        A2 $\rightarrow$ B1 & 5 & 0.41\% \\
+        B1 $\rightarrow$ A2 & 5 & 0.41\% \\
+        B2 $\rightarrow$ C1 & 4 & 0.33\% \\
+        C1 $\rightarrow$ B2 & 4 & 0.33\% \\
+        A1 $\rightarrow$ A2 & 2 & 0.17\% \\
+        A2 $\rightarrow$ A1 & 2 & 0.17\% \\
+        \midrule
+        \textbf{Total entries} & \textbf{1212} & \textbf{100\%} \\
+        \bottomrule
+    \end{tabular}
+    \caption{Detailed Transfer Distribution Overview}
+    \label{tab:detailed_transfer_distribution}
+\end{table}
+
+% \begin{figure}[ht]
+%     \centering
+%     \begin{tikzpicture}[scale=0.8]
+%         % Define colors
+%         \definecolor{barcolor1}{RGB}{31,119,180}
+%         \definecolor{barcolor2}{RGB}{255,127,14}
+        
+%         % Draw axes
+%         \draw[->] (0,0) -- (10,0) node[right] {Models};
+%         % \draw[->] (0,0) -- (0,10) node[above] {Performance};
+%         \draw[->] (0,0) -- (0,10);
+%         \node[anchor=south] at (0,10.5) {Performance};
+        
+%         % Y-axis labels
+%         \foreach \y in {0,20,40,60,80,100}
+%             \draw (0,\y/10) node[left] {\y\%} -- (-0.1,\y/10);
+        
+%         % Data
+%         \foreach [count=\i] \model/\accuracy/\groupaccuracy in {
+%             % {google/gemma-2-27b-it}/38.00/77.33,
+%             {Qwen/Qwen2-7B-Instruct}/38.00/80.67,
+%             {Meta-LLaMA-3-70B-Instruct}/44.67/92.67,
+%             {Meta-LLaMA-3-8B-Instruct}/59.33/94.00,
+%             % {openai/gpt-4o-mini}/39.33/94.67,
+%             {Qwen/Qwen2-72B-Instruct}/54.67/98.00
+%         } {
+%             % Draw bars
+%             \fill[barcolor1] (2.25*\i-1.6,0) rectangle (2.25*\i-0.85,\accuracy/10);
+%             \fill[barcolor2] (2.25*\i-0.8,0) rectangle (2.25*\i-0.05,\groupaccuracy/10);
+            
+%             % Labels
+%             \node[below, text width=2.5cm, align=center, rotate=45, anchor=north east] at (2.25*\i-0,0) {\footnotesize\model};
+%             \node[above right, xshift=2pt] at (2.25*\i-2.2,\accuracy/10) {\footnotesize\accuracy\%};
+%             \node[above right, xshift=2pt] at (2.25*\i-1.3,\groupaccuracy/10) {\footnotesize\groupaccuracy\%};
+%         }
+        
+%         % Improved Legend with more spacing
+%         \node[anchor=north west, inner sep=0, outer sep=0] at (3,11.0) {
+%             \begin{tikzpicture}
+%                 \fill[barcolor1] (0,0) rectangle (0.3,0.3);
+%                 \node[right] at (0.4,0.15) {Accuracy (\%)};
+%                 \fill[barcolor2] (3,0) rectangle (3.3,0.3);
+%                 \node[right] at (3.4,0.15) {Group Accuracy (\%)};
+%             \end{tikzpicture}
+%         };
+        
+%     \end{tikzpicture}
+%     \caption{Performance Comparison of Different Language Models}
+%     \label{fig:llm-performance-comparison}
+% \end{figure}

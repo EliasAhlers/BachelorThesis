@@ -1,0 +1,37 @@
+\chapter{Introduction}
+\label{ch:intro}
+In the rapidly evolving field of artificial intelligence, Large Language Models (LLMs) such as GPT, LLaMA, Qwen, and Gemini have demonstrated remarkable capabilities in processing and generating human-like text. Despite their widespread success, the application of these models in language proficiency classification, particularly for German, remains limited.
+
+\section{Motivation}
+\label{s:motivation}
+While LLMs are predominantly used for generating human-like text, their potential in language proficiency classification and text adaptation has not been fully explored. There is a notable lack of comprehensive solutions for classifying and adapting texts according to the Common European Framework of Reference for Languages (CEFR) levels, especially for German. The predominance of English in training datasets has led to models favoring English grammar and sentence structures, resulting in suboptimal performance when applied to other languages, including German.
+
+This thesis aims to investigate the potential of LLMs in classifying and transferring between German language proficiency levels as defined by the CEFR. The focus will be particularly on Transformer-based models originally designed for natural language processing tasks. Although some preexisting solutions for German exist, they are limited in scope and performance, often requiring substantial manual work during training. Moreover, these solutions lack the capability to transfer between language proficiency levels.
+
+Given the outstanding capabilities of LLMs in processing and generating human-like text, I theorize that they should excel at the task of language proficiency classification and transformation. This thesis will investigate the potential of LLMs in this regard, addressing the current gaps in transformation and potential in improving the classification of German texts by CEFR levels.
+
+\section{Research Questions}
+\label{s:research_questions}
+The primary research question guiding this thesis is:
+\begin{quote}
+    "How can Large Language Models (LLMs) be Effectively Used for Classifying and Transferring Between Language Proficiency Levels in German?"
+\end{quote}
+
+To address this question, the following sub-questions will be explored:
+
+\begin{enumerate}
+    \item How to objectively evaluate the performance of LLMs in classifying and transferring German texts by CEFR levels?
+    \item How can prompt engineering and fine-tuning techniques be used to guide and optimize LLMs for the classification task?
+    \item Which LLM is best suited for the classification and transfer tasks?
+    \item How can fine-tuning be used to accomplish the transfer task?
+    % \item To what extent can fine-tuning on a specialized dataset improve the classification performance of LLMs for German language proficiency levels?
+\end{enumerate}
+
+\section{Overview}
+\label{s:overview}
+The following chapter establishes the foundation of the research by presenting a background on LLMs, the CEFR framework and current approaches to language proficiency classification and text adaptation. Chapter 3 outlines the methodology used in this thesis, detailing the dataset creation, benchmark design, model selection, data preparation and fine-tuning process. In Chapter 4 I present an analysis of the benchmarks results, including both quantitative performance metrics and qualitative assessments of the LLMs' capabilities in classifying and adapting German texts. Chapter 5, the results, offers a critical discussion of the findings, exploring their implications for language education and assessment, while also addressing the limitations of the thesis and suggesting potential improving to the methodologies used. Finally in Chapter 6, the conclusion, I summarize the key findings of the research and propose directions for future thesis in the field of language proficiency classification and text adaptation using LLMs.
+
+\section{Git Repository}
+\label{s:git_repo}
+The code and resources used in this thesis are available on GitHub at \\
+\href{https://github.com/EliasAhlers/BachelorThesis}{https://github.com/EliasAhlers/BachelorThesis}
